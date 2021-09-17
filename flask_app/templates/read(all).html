@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Users</title>
+    <style>
+        #content{
+            max-width: 800px;
+            margin: auto;
+    }
+    table{
+        border: 5px solid black;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1> All Users </h1>
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Full Name</td>
+                    <td>Email</td>
+                    <td>Created At</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            {% for user in users %}
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.created_at }}</td>
+                <td>
+                    <a href="/users/{{users.ID}}">Show | </a>
+                    <a href="/users/{{users.ID}}/edit/">Edit | </a> 
+                    <a href="/users/{{users.ID}}/delete/">Delete</a> 
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/user_signup">Add a New User</a>
+    </div>
+</body>
+
+</html>

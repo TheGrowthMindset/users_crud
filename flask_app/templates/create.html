@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+        #content{
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+
+    <title>Sign UP</title>
+</head>
+<body>
+    <div id="content">
+        <div id="navbar">
+            <h1> Add a New User </h1>
+            <a href="/">Home</a>
+        </div>
+        <form action="/create_new" method='POST'>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name">
+        </br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name">
+        </br>
+            <label for="mail">Email:</label>
+            <input type="text" id="mail" name="mail" placeholder="Email">
+        </br>
+            <input type="submit" id="send" value="Create">
+        </form>
+    </div>
+</body>
+</html>
